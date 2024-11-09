@@ -68,6 +68,24 @@ demo_clt(rgamma, n = c(5, 10, 20, 40), nrep = 10000,
         shape = 2, rate = 1, mean = 2, sd = sqrt(2))
 ```
 
+# A General Distribution Constructed from a Mixture
+
+When the population `mean` and `sd` are unspecified, the will be
+approximated by a large sample (10,000) and then used in
+standardization. For instance, consider sampling from the following
+mixture distribution.
+
+```{r mixture}
+mymix_rng <- function(n, rate = 0.5) {
+    ifelse(runif(n) < rate,
+           rgamma(n, shape = 0.5), rgamma(n, shape = 4))
+}
+
+demo_clt(mymix_rng, n = c(5, 10, 20, 40))
+
+```
+
+
 # Conclusion
 
 The plots above demonstrate the Central Limit Theorem in action.
