@@ -1,0 +1,24 @@
+Package: ibist
+Title: Companion to Introduction to Biostatistics with R
+Version: 0.0-1
+Authors@R: c(
+    person(given = "Elizabeth", family = "Schifano",
+           role = c("aut"),
+           comment = c(ORCID = "0000-0002-9793-332X")),
+    person(given = "Jun", family = "Yan",
+           email = "jun.yan@uconn.edu",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-4401-7296"))
+    )
+Description: Datasets and functions in the book
+    "Introduction to Biostatistics with R" by
+    Schifano and Yan (2025), Taylor Francis.
+Depends:
+    R (>= 4.4.1)
+VignetteBuilder: knitr
+Suggests: knitr, rmarkdown
+License: GPL (>= 3)
+URL: https://github.com/statds/ibist-R
+BugReports: https://github.com/statds/ibist-R/issues
+Imports: ggplot2
+RoxygenNote: 7.3.2
